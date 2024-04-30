@@ -19,7 +19,7 @@
 
 		<div class="this-product-is-unavailable-to-parent">
 			<div class="this-product-is">This product is unavailable to show</div>
-			<div class="rectangle-parent">
+			<div class="rectangle-parent" style="cursor: pointer" @click="nextProduct">
 				<div class="group-child"></div>
 				<div class="next-product">Next product</div>
 			</div>
@@ -29,7 +29,12 @@
 
 <script>
 export default {
-	name: 'ManView',
+	name: 'LostView',
+	methods: {
+		nextProduct() {
+			this.$emit('next-product', 1);
+		},
+	},
 };
 </script>
 

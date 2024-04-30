@@ -11,7 +11,7 @@
 			v-if="!loading && !isMan && isWoman"
 			:data="data"
 			@next-product="nextProduct($event)" />
-		<LostView v-if="!loading && !isMan && !isWoman" @next-product="nextProduct" />
+		<LostView v-if="!loading && !isMan && !isWoman" @next-product="nextProduct($event)" />
 	</div>
 </template>
 
@@ -55,6 +55,10 @@ export default {
 					this.isWoman = true;
 					this.isMan = false;
 				}
+                else{
+                    this.isMan = false;
+                    this.isWoman = false;
+                }
 				this.loading = false;
 			} catch (error) {
 				console.error('Error fetching data:', error);

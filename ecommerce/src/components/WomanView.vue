@@ -70,7 +70,7 @@ export default {
 	},
 	methods: {
 		nextProduct() {
-			this.$emit('next-product', 1); // 1 adalah informasi tambahan yang menyatakan penambahan 1 pada productNumber
+			this.$emit('next-product', 1);
 		},
 	},
 };
